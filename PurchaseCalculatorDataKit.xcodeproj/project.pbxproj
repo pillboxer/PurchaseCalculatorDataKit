@@ -7,9 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		863FC83B258B5B2E0034220B /* PurchaseItemAttributeMultipliersGroups.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC832258B5B2E0034220B /* PurchaseItemAttributeMultipliersGroups.json */; };
+		863FC83C258B5B2E0034220B /* SpecificPurchaseUnitGroups.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC833258B5B2E0034220B /* SpecificPurchaseUnitGroups.json */; };
+		863FC83D258B5B2E0034220B /* PurchaseCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC834258B5B2E0034220B /* PurchaseCategories.json */; };
+		863FC83E258B5B2E0034220B /* PurchaseItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC835258B5B2E0034220B /* PurchaseItems.json */; };
+		863FC83F258B5B2E0034220B /* PurchaseAttributeValueQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC836258B5B2E0034220B /* PurchaseAttributeValueQuestions.json */; };
+		863FC840258B5B2E0034220B /* SpecificPurchaseUnits.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC837258B5B2E0034220B /* SpecificPurchaseUnits.json */; };
+		863FC841258B5B2E0034220B /* PurchaseBrands.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC838258B5B2E0034220B /* PurchaseBrands.json */; };
+		863FC842258B5B2E0034220B /* PurchaseItemGroups.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC839258B5B2E0034220B /* PurchaseItemGroups.json */; };
+		863FC843258B5B2E0034220B /* PurchaseAttributes.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC83A258B5B2E0034220B /* PurchaseAttributes.json */; };
 		86D29B27258B56C30074B8BE /* PurchaseCalculatorDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D29B1D258B56C30074B8BE /* PurchaseCalculatorDataKit.framework */; };
 		86D29B2C258B56C30074B8BE /* PurchaseCalculatorDataKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D29B2B258B56C30074B8BE /* PurchaseCalculatorDataKitTests.swift */; };
 		86D29B2E258B56C30074B8BE /* PurchaseCalculatorDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 86D29B20258B56C30074B8BE /* PurchaseCalculatorDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86D29B3C258B573F0074B8BE /* BundledContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D29B3B258B573F0074B8BE /* BundledContentManager.swift */; };
+		86D29B42258B57640074B8BE /* GlobalEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D29B41258B57640074B8BE /* GlobalEnums.swift */; };
+		86D29B5A258B57C40074B8BE /* FirebaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D29B59258B57C40074B8BE /* FirebaseCoordinator.swift */; };
+		86FFF25F258B5EDF0087F75F /* FirebaseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D29B62258B57F60074B8BE /* FirebaseKit.framework */; };
+		86FFF260258B5EDF0087F75F /* FirebaseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86D29B62258B57F60074B8BE /* FirebaseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86FFF261258B5EDF0087F75F /* SystemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D29B4B258B57880074B8BE /* SystemKit.framework */; };
+		86FFF262258B5EDF0087F75F /* SystemKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86D29B4B258B57880074B8BE /* SystemKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +36,72 @@
 			remoteGlobalIDString = 86D29B1C258B56C30074B8BE;
 			remoteInfo = PurchaseCalculatorDataKit;
 		};
+		86D29B4A258B57880074B8BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D29B45258B57880074B8BE /* SystemKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86987030254DA8EC0029B2DE;
+			remoteInfo = SystemKit;
+		};
+		86D29B4C258B57880074B8BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D29B45258B57880074B8BE /* SystemKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86987039254DA8EC0029B2DE;
+			remoteInfo = SystemKitTests;
+		};
+		86D29B61258B57F60074B8BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D29B5C258B57F60074B8BE /* FirebaseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8F80258A672A00EEB0D8;
+			remoteInfo = FirebaseKit;
+		};
+		86D29B63258B57F60074B8BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D29B5C258B57F60074B8BE /* FirebaseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8F89258A672A00EEB0D8;
+			remoteInfo = FirebaseKitTests;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		86FFF263258B5EDF0087F75F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				86FFF262258B5EDF0087F75F /* SystemKit.framework in Embed Frameworks */,
+				86FFF260258B5EDF0087F75F /* FirebaseKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		863FC832258B5B2E0034220B /* PurchaseItemAttributeMultipliersGroups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PurchaseItemAttributeMultipliersGroups.json; sourceTree = "<group>"; };
+		863FC833258B5B2E0034220B /* SpecificPurchaseUnitGroups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpecificPurchaseUnitGroups.json; sourceTree = "<group>"; };
+		863FC834258B5B2E0034220B /* PurchaseCategories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PurchaseCategories.json; sourceTree = "<group>"; };
+		863FC835258B5B2E0034220B /* PurchaseItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PurchaseItems.json; sourceTree = "<group>"; };
+		863FC836258B5B2E0034220B /* PurchaseAttributeValueQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PurchaseAttributeValueQuestions.json; sourceTree = "<group>"; };
+		863FC837258B5B2E0034220B /* SpecificPurchaseUnits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpecificPurchaseUnits.json; sourceTree = "<group>"; };
+		863FC838258B5B2E0034220B /* PurchaseBrands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PurchaseBrands.json; sourceTree = "<group>"; };
+		863FC839258B5B2E0034220B /* PurchaseItemGroups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PurchaseItemGroups.json; sourceTree = "<group>"; };
+		863FC83A258B5B2E0034220B /* PurchaseAttributes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PurchaseAttributes.json; sourceTree = "<group>"; };
 		86D29B1D258B56C30074B8BE /* PurchaseCalculatorDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PurchaseCalculatorDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D29B20258B56C30074B8BE /* PurchaseCalculatorDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurchaseCalculatorDataKit.h; sourceTree = "<group>"; };
 		86D29B21258B56C30074B8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86D29B26258B56C30074B8BE /* PurchaseCalculatorDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurchaseCalculatorDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D29B2B258B56C30074B8BE /* PurchaseCalculatorDataKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCalculatorDataKitTests.swift; sourceTree = "<group>"; };
 		86D29B2D258B56C30074B8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86D29B3B258B573F0074B8BE /* BundledContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundledContentManager.swift; sourceTree = "<group>"; };
+		86D29B41258B57640074B8BE /* GlobalEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnums.swift; sourceTree = "<group>"; };
+		86D29B45258B57880074B8BE /* SystemKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SystemKit.xcodeproj; path = ../SystemKit/SystemKit.xcodeproj; sourceTree = "<group>"; };
+		86D29B59258B57C40074B8BE /* FirebaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseCoordinator.swift; sourceTree = "<group>"; };
+		86D29B5C258B57F60074B8BE /* FirebaseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FirebaseKit.xcodeproj; path = ../FirebaseKit/FirebaseKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86FFF261258B5EDF0087F75F /* SystemKit.framework in Frameworks */,
+				86FFF25F258B5EDF0087F75F /* FirebaseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +125,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		863FC831258B5B2E0034220B /* Bundled Content */ = {
+			isa = PBXGroup;
+			children = (
+				863FC832258B5B2E0034220B /* PurchaseItemAttributeMultipliersGroups.json */,
+				863FC833258B5B2E0034220B /* SpecificPurchaseUnitGroups.json */,
+				863FC834258B5B2E0034220B /* PurchaseCategories.json */,
+				863FC835258B5B2E0034220B /* PurchaseItems.json */,
+				863FC836258B5B2E0034220B /* PurchaseAttributeValueQuestions.json */,
+				863FC837258B5B2E0034220B /* SpecificPurchaseUnits.json */,
+				863FC838258B5B2E0034220B /* PurchaseBrands.json */,
+				863FC839258B5B2E0034220B /* PurchaseItemGroups.json */,
+				863FC83A258B5B2E0034220B /* PurchaseAttributes.json */,
+			);
+			name = "Bundled Content";
+			path = "PurchaseCalculatorDataKit/Bundled Content";
+			sourceTree = "<group>";
+		};
 		86D29B13258B56C30074B8BE = {
 			isa = PBXGroup;
 			children = (
+				863FC831258B5B2E0034220B /* Bundled Content */,
+				86D29B5C258B57F60074B8BE /* FirebaseKit.xcodeproj */,
+				86D29B45258B57880074B8BE /* SystemKit.xcodeproj */,
 				86D29B1F258B56C30074B8BE /* PurchaseCalculatorDataKit */,
 				86D29B2A258B56C30074B8BE /* PurchaseCalculatorDataKitTests */,
 				86D29B1E258B56C30074B8BE /* Products */,
+				86D29B52258B57970074B8BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				86D29B20258B56C30074B8BE /* PurchaseCalculatorDataKit.h */,
+				86D29B3B258B573F0074B8BE /* BundledContentManager.swift */,
+				86D29B59258B57C40074B8BE /* FirebaseCoordinator.swift */,
+				86D29B41258B57640074B8BE /* GlobalEnums.swift */,
 				86D29B21258B56C30074B8BE /* Info.plist */,
 			);
 			path = PurchaseCalculatorDataKit;
@@ -84,6 +183,31 @@
 				86D29B2D258B56C30074B8BE /* Info.plist */,
 			);
 			path = PurchaseCalculatorDataKitTests;
+			sourceTree = "<group>";
+		};
+		86D29B46258B57880074B8BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86D29B4B258B57880074B8BE /* SystemKit.framework */,
+				86D29B4D258B57880074B8BE /* SystemKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86D29B52258B57970074B8BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86D29B5D258B57F60074B8BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86D29B62258B57F60074B8BE /* FirebaseKit.framework */,
+				86D29B64258B57F60074B8BE /* FirebaseKitTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +232,7 @@
 				86D29B19258B56C30074B8BE /* Sources */,
 				86D29B1A258B56C30074B8BE /* Frameworks */,
 				86D29B1B258B56C30074B8BE /* Resources */,
+				86FFF263258B5EDF0087F75F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +272,7 @@
 				TargetAttributes = {
 					86D29B1C258B56C30074B8BE = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 					86D29B25258B56C30074B8BE = {
 						CreatedOnToolsVersion = 12.1;
@@ -164,6 +290,16 @@
 			mainGroup = 86D29B13258B56C30074B8BE;
 			productRefGroup = 86D29B1E258B56C30074B8BE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 86D29B5D258B57F60074B8BE /* Products */;
+					ProjectRef = 86D29B5C258B57F60074B8BE /* FirebaseKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 86D29B46258B57880074B8BE /* Products */;
+					ProjectRef = 86D29B45258B57880074B8BE /* SystemKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				86D29B1C258B56C30074B8BE /* PurchaseCalculatorDataKit */,
@@ -172,11 +308,51 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		86D29B4B258B57880074B8BE /* SystemKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SystemKit.framework;
+			remoteRef = 86D29B4A258B57880074B8BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86D29B4D258B57880074B8BE /* SystemKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SystemKitTests.xctest;
+			remoteRef = 86D29B4C258B57880074B8BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86D29B62258B57F60074B8BE /* FirebaseKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseKit.framework;
+			remoteRef = 86D29B61258B57F60074B8BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86D29B64258B57F60074B8BE /* FirebaseKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FirebaseKitTests.xctest;
+			remoteRef = 86D29B63258B57F60074B8BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		86D29B1B258B56C30074B8BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863FC83C258B5B2E0034220B /* SpecificPurchaseUnitGroups.json in Resources */,
+				863FC842258B5B2E0034220B /* PurchaseItemGroups.json in Resources */,
+				863FC83F258B5B2E0034220B /* PurchaseAttributeValueQuestions.json in Resources */,
+				863FC83D258B5B2E0034220B /* PurchaseCategories.json in Resources */,
+				863FC841258B5B2E0034220B /* PurchaseBrands.json in Resources */,
+				863FC843258B5B2E0034220B /* PurchaseAttributes.json in Resources */,
+				863FC83B258B5B2E0034220B /* PurchaseItemAttributeMultipliersGroups.json in Resources */,
+				863FC840258B5B2E0034220B /* SpecificPurchaseUnits.json in Resources */,
+				863FC83E258B5B2E0034220B /* PurchaseItems.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D29B5A258B57C40074B8BE /* FirebaseCoordinator.swift in Sources */,
+				86D29B3C258B573F0074B8BE /* BundledContentManager.swift in Sources */,
+				86D29B42258B57640074B8BE /* GlobalEnums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,11 +447,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -326,10 +506,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -341,6 +522,7 @@
 		86D29B32258B56C30074B8BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +538,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SixEye.PurchaseCalculatorDataKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +548,7 @@
 		86D29B33258B56C30074B8BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -379,6 +564,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SixEye.PurchaseCalculatorDataKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -387,6 +573,7 @@
 		86D29B35258B56C30074B8BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PurchaseCalculatorDataKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +591,7 @@
 		86D29B36258B56C30074B8BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PurchaseCalculatorDataKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
