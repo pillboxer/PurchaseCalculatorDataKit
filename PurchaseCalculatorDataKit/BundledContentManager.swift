@@ -18,7 +18,7 @@ public class BundledContentManager: NSObject {
     
     public func saveBundledContentToDisk() {
         
-        PurchaseCalculatorJSONFileType.allCases.forEach { (type) in
+        PurchaseCalculatorDatabaseChildType.allCases.forEach { (type) in
             do {
                 let bundle = Bundle(for: classForCoder)
                 let data = try fileManager.dataFromBundle(bundle: bundle, file: type.rawValue, type: "json")

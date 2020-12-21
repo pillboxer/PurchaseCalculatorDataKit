@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum PurchaseCalculatorJSONFileType: String, CaseIterable, Identifiable {
+public enum PurchaseCalculatorDatabaseChildType: String, CaseIterable, Identifiable {
     case categories = "PurchaseCategories"
     case itemGroup = "PurchaseItemGroups"
     case items = "PurchaseItems"
@@ -17,8 +17,19 @@ public enum PurchaseCalculatorJSONFileType: String, CaseIterable, Identifiable {
     case attributes = "PurchaseAttributes"
     case attributeMultiplierGroups = "PurchaseItemAttributeMultipliersGroups"
     case valuesQuestions = "PurchaseAttributeValueQuestions"
-    
+
     public var id: String {
         rawValue
     }
+}
+
+public enum PurchaseCalculatorDatabaseValueType: String {
+    case cost
+    case name
+    case handle
+    case uuid
+    case modelName
+    case brandID
+    case imageName
+    case unitIDs
 }

@@ -8,20 +8,21 @@
 import Foundation
 import FirebaseKit
 import Firebase
-import SystemKit
 import Combine
 
 public class FirebaseCoordinator: ObservableObject {
     
     public static let shared = FirebaseCoordinator()
-    @Published public var databaseRootNodes: [BasicRootNode] = []
     private let manager = FirebaseManager.shared
     
+    @Published public var latestChildAdded: PurchaseCalculatorDatabaseChildType?
+    @Published public var databaseAddingError = false
+    
     public func updateJSON() {
-        PurchaseCalculatorJSONFileType.allCases.forEach { updateJSON($0) }
+        PurchaseCalculatorDatabaseChildType.allCases.forEach { updateJSON($0) }
     }
             
-    private func updateJSON(_ type: PurchaseCalculatorJSONFileType) {
+    private func updateJSON(_ type: PurchaseCalculatorDatabaseChildType) {
         manager.listenTo(type.rawValue) { (data) in
             if let data = data {
                 do {
@@ -35,38 +36,54 @@ public class FirebaseCoordinator: ObservableObject {
         }
     }
     
-    public func getNames(_ parent: String?) {
-        manager.getChild(parent) { (snapshot) in
-           let isRoot = parent == nil
-            if isRoot {
-                let children = snapshot.children.allObjects.compactMap { $0 as? DataSnapshot }
-                let keys = children.compactMap { $0.key }
-                let nodes = keys.map { BasicRootNode(title: $0) }
-                self.databaseRootNodes = nodes
-            }
+    public func retrieveDatabaseChildren(_ type: PurchaseCalculatorDatabaseChildType?, completion: @escaping (DataSnapshot) -> Void) {
+        manager.getChild(type?.rawValue) { (snapshot) in
+            completion(snapshot)
+        }
+    }
+    
+    public func addValues(_ parameters: [PurchaseCalculatorDatabaseValueType: Any], to child: PurchaseCalculatorDatabaseChildType) {
+        let stringParams = parameters.map { ($0.key.rawValue, $0.value) }
+        let newParams = Dictionary(uniqueKeysWithValues: stringParams)
+        latestChildAdded = nil
+        manager.addToChild(child.rawValue, values: newParams) { success in
+            self.latestChildAdded = success ? child : nil
+            self.databaseAddingError = !success
+        }
+    }
+    
+    public func addToArray(_ string: String, to valueType: PurchaseCalculatorDatabaseValueType, belongingTo childType: PurchaseCalculatorDatabaseChildType, with key: String) {
+        latestChildAdded = nil
+        let child = valueType.rawValue
+        let parent = childType.rawValue
+        manager.addValue(string, to: child, of: parent, with: key) { success in
+            self.latestChildAdded = success ? childType : nil
+            self.databaseAddingError = !success
         }
     }
 }
 
-public class BasicRootNode: Decodable {
-    
-    public let title: String
-    
-    init(title: String) {
-        self.title = title
+public extension DataSnapshot {
+
+    var childSnapshots: [DataSnapshot] {
+        children.allObjects.compactMap { $0 as? DataSnapshot }
     }
+    
+    func doubleFrom(_ type: PurchaseCalculatorDatabaseValueType) -> Double {
+        retrieve(type: Double.self, fromPath: type.rawValue, defaultType: Double.zero)
+    }
+    
+    func stringFrom(_ type: PurchaseCalculatorDatabaseValueType) -> String {
+        retrieve(type: String.self, fromPath: type.rawValue, defaultType: "")
+    }
+    
+    func stringsFrom(_ type: PurchaseCalculatorDatabaseValueType) -> [String] {
+        let dict = retrieve(type: [String:String].self, fromPath: type.rawValue, defaultType: [:])
+        return Array(dict.values)
+    }
+    
+    func retrieve<T>(type: T.Type, fromPath path: String, defaultType: T) -> T {
+        return childSnapshot(forPath: path).value as? T ?? defaultType
+    }
+    
 }
-
-public enum FirebaseRequirement: String {
-    case title
-    case attributeID
-    case handle
-    case name
-    case imageName
-    case purchaseItemGroupID
-    case brandID
-    case cost
-    case modelName
-}
-
-
