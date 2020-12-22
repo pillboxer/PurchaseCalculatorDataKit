@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8625C4A8259259CE006B29BA /* FirebaseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8625C4A7259259CE006B29BA /* FirebaseKit.framework */; };
+		8625C4AC259259DF006B29BA /* SystemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8625C4AB259259DF006B29BA /* SystemKit.framework */; };
 		863FC83B258B5B2E0034220B /* PurchaseItemAttributeMultipliersGroups.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC832258B5B2E0034220B /* PurchaseItemAttributeMultipliersGroups.json */; };
 		863FC83C258B5B2E0034220B /* SpecificPurchaseUnitGroups.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC833258B5B2E0034220B /* SpecificPurchaseUnitGroups.json */; };
 		863FC83D258B5B2E0034220B /* PurchaseCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = 863FC834258B5B2E0034220B /* PurchaseCategories.json */; };
@@ -22,10 +24,6 @@
 		86D29B3C258B573F0074B8BE /* BundledContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D29B3B258B573F0074B8BE /* BundledContentManager.swift */; };
 		86D29B42258B57640074B8BE /* GlobalEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D29B41258B57640074B8BE /* GlobalEnums.swift */; };
 		86D29B5A258B57C40074B8BE /* FirebaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D29B59258B57C40074B8BE /* FirebaseCoordinator.swift */; };
-		86E642EA258E9B1A00A4EE13 /* FirebaseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D29B62258B57F60074B8BE /* FirebaseKit.framework */; };
-		86E642EB258E9B1A00A4EE13 /* FirebaseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86D29B62258B57F60074B8BE /* FirebaseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		86FFF261258B5EDF0087F75F /* SystemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D29B4B258B57880074B8BE /* SystemKit.framework */; };
-		86FFF262258B5EDF0087F75F /* SystemKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86D29B4B258B57880074B8BE /* SystemKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,52 +34,11 @@
 			remoteGlobalIDString = 86D29B1C258B56C30074B8BE;
 			remoteInfo = PurchaseCalculatorDataKit;
 		};
-		86D29B4A258B57880074B8BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 86D29B45258B57880074B8BE /* SystemKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86987030254DA8EC0029B2DE;
-			remoteInfo = SystemKit;
-		};
-		86D29B4C258B57880074B8BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 86D29B45258B57880074B8BE /* SystemKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86987039254DA8EC0029B2DE;
-			remoteInfo = SystemKitTests;
-		};
-		86D29B61258B57F60074B8BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 86D29B5C258B57F60074B8BE /* FirebaseKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8F80258A672A00EEB0D8;
-			remoteInfo = FirebaseKit;
-		};
-		86D29B63258B57F60074B8BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 86D29B5C258B57F60074B8BE /* FirebaseKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8F89258A672A00EEB0D8;
-			remoteInfo = FirebaseKitTests;
-		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		86FFF263258B5EDF0087F75F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				86E642EB258E9B1A00A4EE13 /* FirebaseKit.framework in Embed Frameworks */,
-				86FFF262258B5EDF0087F75F /* SystemKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		8625C4A7259259CE006B29BA /* FirebaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8625C4AB259259DF006B29BA /* SystemKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SystemKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		863FC832258B5B2E0034220B /* PurchaseItemAttributeMultipliersGroups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PurchaseItemAttributeMultipliersGroups.json; sourceTree = "<group>"; };
 		863FC833258B5B2E0034220B /* SpecificPurchaseUnitGroups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpecificPurchaseUnitGroups.json; sourceTree = "<group>"; };
 		863FC834258B5B2E0034220B /* PurchaseCategories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PurchaseCategories.json; sourceTree = "<group>"; };
@@ -99,9 +56,7 @@
 		86D29B2D258B56C30074B8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86D29B3B258B573F0074B8BE /* BundledContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundledContentManager.swift; sourceTree = "<group>"; };
 		86D29B41258B57640074B8BE /* GlobalEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnums.swift; sourceTree = "<group>"; };
-		86D29B45258B57880074B8BE /* SystemKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SystemKit.xcodeproj; path = ../SystemKit/SystemKit.xcodeproj; sourceTree = "<group>"; };
 		86D29B59258B57C40074B8BE /* FirebaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseCoordinator.swift; sourceTree = "<group>"; };
-		86D29B5C258B57F60074B8BE /* FirebaseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FirebaseKit.xcodeproj; path = ../FirebaseKit/FirebaseKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E642EA258E9B1A00A4EE13 /* FirebaseKit.framework in Frameworks */,
-				86FFF261258B5EDF0087F75F /* SystemKit.framework in Frameworks */,
+				8625C4AC259259DF006B29BA /* SystemKit.framework in Frameworks */,
+				8625C4A8259259CE006B29BA /* FirebaseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				863FC831258B5B2E0034220B /* Bundled Content */,
-				86D29B5C258B57F60074B8BE /* FirebaseKit.xcodeproj */,
-				86D29B45258B57880074B8BE /* SystemKit.xcodeproj */,
 				86D29B1F258B56C30074B8BE /* PurchaseCalculatorDataKit */,
 				86D29B2A258B56C30074B8BE /* PurchaseCalculatorDataKitTests */,
 				86D29B1E258B56C30074B8BE /* Products */,
@@ -185,29 +138,13 @@
 			path = PurchaseCalculatorDataKitTests;
 			sourceTree = "<group>";
 		};
-		86D29B46258B57880074B8BE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				86D29B4B258B57880074B8BE /* SystemKit.framework */,
-				86D29B4D258B57880074B8BE /* SystemKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		86D29B52258B57970074B8BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8625C4AB259259DF006B29BA /* SystemKit.framework */,
+				8625C4A7259259CE006B29BA /* FirebaseKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		86D29B5D258B57F60074B8BE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				86D29B62258B57F60074B8BE /* FirebaseKit.framework */,
-				86D29B64258B57F60074B8BE /* FirebaseKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +169,6 @@
 				86D29B19258B56C30074B8BE /* Sources */,
 				86D29B1A258B56C30074B8BE /* Frameworks */,
 				86D29B1B258B56C30074B8BE /* Resources */,
-				86FFF263258B5EDF0087F75F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,16 +226,6 @@
 			mainGroup = 86D29B13258B56C30074B8BE;
 			productRefGroup = 86D29B1E258B56C30074B8BE /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 86D29B5D258B57F60074B8BE /* Products */;
-					ProjectRef = 86D29B5C258B57F60074B8BE /* FirebaseKit.xcodeproj */;
-				},
-				{
-					ProductGroup = 86D29B46258B57880074B8BE /* Products */;
-					ProjectRef = 86D29B45258B57880074B8BE /* SystemKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				86D29B1C258B56C30074B8BE /* PurchaseCalculatorDataKit */,
@@ -307,37 +233,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		86D29B4B258B57880074B8BE /* SystemKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SystemKit.framework;
-			remoteRef = 86D29B4A258B57880074B8BE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		86D29B4D258B57880074B8BE /* SystemKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SystemKitTests.xctest;
-			remoteRef = 86D29B4C258B57880074B8BE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		86D29B62258B57F60074B8BE /* FirebaseKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FirebaseKit.framework;
-			remoteRef = 86D29B61258B57F60074B8BE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		86D29B64258B57F60074B8BE /* FirebaseKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = FirebaseKitTests.xctest;
-			remoteRef = 86D29B63258B57F60074B8BE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		86D29B1B258B56C30074B8BE /* Resources */ = {
@@ -527,8 +422,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZUT4ATB28X;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -554,8 +451,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZUT4ATB28X;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

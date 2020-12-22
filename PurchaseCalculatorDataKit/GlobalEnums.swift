@@ -10,10 +10,13 @@ import Foundation
 public enum PurchaseCalculatorDatabaseChildType: String, CaseIterable, Identifiable {
     case categories = "PurchaseCategories"
     case itemGroup = "PurchaseItemGroups"
-    case items = "PurchaseItems"
-    case specificUnits = "SpecificPurchaseUnits"
-    case specificUnitGroups = "SpecificPurchaseUnitGroups"
-    case brands = "PurchaseBrands"
+    case purchaseItems = "PurchaseItems"
+    
+    case specificPurchaseUnits = "SpecificPurchaseUnits"
+    case specificPurchaseUnitGroups = "SpecificPurchaseUnitGroups"
+    
+    case purchaseBrands = "PurchaseBrands"
+    
     case attributes = "PurchaseAttributes"
     case attributeMultiplierGroups = "PurchaseItemAttributeMultipliersGroups"
     case valuesQuestions = "PurchaseAttributeValueQuestions"
@@ -25,11 +28,11 @@ public enum PurchaseCalculatorDatabaseChildType: String, CaseIterable, Identifia
 
 public enum PurchaseCalculatorDatabaseValueType: String {
     case cost
-    case name
     case handle
     case uuid
     case modelName
     case brandID
     case imageName
     case unitIDs
+    case specificPurchaseUnitGroupID
 }

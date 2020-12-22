@@ -45,7 +45,6 @@ public class FirebaseCoordinator: ObservableObject {
     public func addValues(_ parameters: [PurchaseCalculatorDatabaseValueType: Any], to child: PurchaseCalculatorDatabaseChildType) {
         let stringParams = parameters.map { ($0.key.rawValue, $0.value) }
         let newParams = Dictionary(uniqueKeysWithValues: stringParams)
-        latestChildAdded = nil
         manager.addToChild(child.rawValue, values: newParams) { success in
             self.latestChildAdded = success ? child : nil
             self.databaseAddingError = !success
@@ -53,10 +52,18 @@ public class FirebaseCoordinator: ObservableObject {
     }
     
     public func addToArray(_ string: String, to valueType: PurchaseCalculatorDatabaseValueType, belongingTo childType: PurchaseCalculatorDatabaseChildType, with key: String) {
-        latestChildAdded = nil
         let child = valueType.rawValue
         let parent = childType.rawValue
         manager.addValue(string, to: child, of: parent, with: key) { success in
+            self.latestChildAdded = success ? childType : nil
+            self.databaseAddingError = !success
+        }
+    }
+    
+    public func updateValue(of valueType: PurchaseCalculatorDatabaseValueType, belongingTo childType: PurchaseCalculatorDatabaseChildType, withKey key: String, to newValue: String) {
+        let child = valueType.rawValue
+        let parent = childType.rawValue
+        manager.updateValue(of: child, with: parent, parentKey: key, to: newValue) { success in
             self.latestChildAdded = success ? childType : nil
             self.databaseAddingError = !success
         }
